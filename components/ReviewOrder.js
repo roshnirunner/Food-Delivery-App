@@ -1,27 +1,25 @@
-'use strict';
+'use strict'
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 import {
   StyleSheet,
   View,
-  Text,
-} from 'react-native';
+  Text
+} from 'react-native'
 
 class ReviewOrder extends Component {
-  render() {
+  render () {
     return (
       <View>
-      	<Text>Review Order</Text>
+        <Text>Review Order</Text>
       </View>
-    );
+    )
   }
 }
 
-
 const styles = StyleSheet.create({
 
-});
+})
 
-
-export default ReviewOrder;
+export default ReviewOrder

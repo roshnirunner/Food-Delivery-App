@@ -1,42 +1,40 @@
 'use strict'
 
-import React, { Component } from 'react';
-import { 
-		 StyleSheet, 
-		 TouchableOpacity, 
+import React, { Component } from 'react'
+import {
+		 StyleSheet,
+		 TouchableOpacity,
 		 Text,
-		 View,
-		} from 'react-native';
+		 View
+} from 'react-native'
 
-import styles from '../styles/menu';
-import { Toolbar } from 'react-native-material-design';
+import styles from '../styles/menu'
+import { Toolbar } from 'react-native-material-design'
 
-import { EventEmitter } from 'fbemitter';
+import { EventEmitter } from 'fbemitter'
 
-let _emitter = new EventEmitter();
+const _emitter = new EventEmitter()
 
 // A particular View Component
 class Notifications extends Component {
+  constructor (props) {
+	  super(props)
 
-	constructor(props) {
-	  super(props);
-	
-	  this.state = {};
-	}
+	  this.state = {}
+  }
 
-// rendering Veiw
-	render() {
-		return (
-			<View style={{flex: 1}}>
-				<Toolbar 
-			 	  			title = "Notifications"
-			 	  			icon = "back"
-			 	  			onIconPress ={() => {_emitter.emit('back')}}
-			 	  		/>
-			</View>
-		);
-	}
-
+  // rendering Veiw
+  render () {
+    return (
+      <View style={{ flex: 1 }}>
+        <Toolbar
+          title='Notifications'
+          icon='back'
+          onIconPress={() => { _emitter.emit('back') }}
+        />
+      </View>
+    )
+  }
 }
 
-module.exports = Notifications;
+module.exports = Notifications
